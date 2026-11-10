@@ -218,3 +218,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Salida de Manim (videos e imágenes renderizadas)
+media/
+
+# Ejecutables de C++
+*.exe
+*.out
+cpp/kahn
