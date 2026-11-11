@@ -1,0 +1,11 @@
+{
+  "n": 3,
+  "aristas": [[0, 1], [1, 2], [2, 1]],
+  "grado_inicial": [0, 2, 1],
+  "cola_inicial": [0],
+  "pasos": [
+    {"sale": 0, "cambios": [{"nodo": 1, "grado": 1, "entra": false}], "cola": []}
+  ],
+  "hay_ciclo": true,
+  "orden": [0]
+}

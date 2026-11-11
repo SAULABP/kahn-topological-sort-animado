@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <string>    
 using namespace std;
 
 // Escribe un vector como lista JSON,  ejemplo [0, 1, 2]
@@ -15,14 +16,19 @@ void escribirLista(ofstream& archivo, vector<int>& lista, int desde){
     archivo << "]";
 }
 
-int main(){
+int main(int argc, char* argv[]){
     int n,m; // n es nodos, m aristas
     cin >> n >> m;
 
     vector<vector<int>> ady(n); //lista de adyacencia
     vector<int> grado(n, 0);  //grado de entrada de cada nodo
 
-    ofstream traza("data/traza.json");
+    string ruta = "data/traza.json";   // ruta por defecto
+        if (argc > 1) {                     
+        ruta = argv[1];                  
+    }
+    ofstream traza(ruta);
+
     traza << "{\n";
     traza << "  \"n\": " << n << ",\n";
     traza << "  \"aristas\": [";
