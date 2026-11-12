@@ -5,7 +5,7 @@ Prof. Luciano A. Romero Calla.
 Video educativo que explica y demuestra el **algoritmo de Kahn** para obtener un
 ordenamiento topológico de un grafo dirigido acíclico (DAG) en O(|V| + |E|).
 
-> [Ver el avance del video](https://drive.google.com/drive/folders/17Kxf36YbiPqlCSS6PIwCzpT4tV9Dyr6b)
+> <https://drive.google.com/drive/folders/17Kxf36YbiPqlCSS6PIwCzpT4tV9Dyr6b>
 
 ## Integrantes
 
