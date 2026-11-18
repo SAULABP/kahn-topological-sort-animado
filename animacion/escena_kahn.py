@@ -75,6 +75,7 @@ class KahnBase(Scene):
     ESCALA = 0.78
     DESPLAZAMIENTO = UP * 0.9
     INTRO = ""
+    PAUSA = 0.6 # segs para leer  cada texto de estado
 
     def construct(self):
         traza = cargar_traza(self.ARCHIVO)
@@ -89,6 +90,7 @@ class KahnBase(Scene):
 
         if self.INTRO:
             self.cambiar_estado(self.INTRO)
+            self.wait(1.5)
         self.dibujar_grafo(traza)
         self.dibujar_paneles()
 
@@ -161,6 +163,7 @@ class KahnBase(Scene):
         else:
             self.play(FadeOut(self.estado, shift=UP * 0.2), FadeIn(nuevo, shift=UP * 0.2), run_time=0.6)
         self.estado = nuevo
+        self.wait(self.PAUSA)
 
     def encolar(self, v):
         ficha = crear_ficha(self.CORTOS[v]).move_to(self.nodos[v])
