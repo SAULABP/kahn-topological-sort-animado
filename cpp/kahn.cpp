@@ -5,11 +5,11 @@
 using namespace std;
 
 // Escribe un vector como lista JSON,  ejemplo [0, 1, 2]
-void escribirLista(ofstream& archivo, vector<int>& lista, int desde){
+void escribirLista(ofstream& archivo, const vector<int>& lista){
     archivo << "[";
-    for (int i = desde; i < lista.size(); i++) {
+    for (int i = 0; i < (int)lista.size(); i++) {
         archivo << lista[i];
-        if (i + 1 < lista.size()) {
+        if (i + 1 < (int)lista.size()) {
             archivo << ", ";
         }
     }
@@ -18,16 +18,24 @@ void escribirLista(ofstream& archivo, vector<int>& lista, int desde){
 
 int main(int argc, char* argv[]){
     int n,m; // n es nodos, m aristas
-    cin >> n >> m;
+    if (!(cin >> n >> m) || n < 0 || m < 0) {
+        cerr << "Entrada invalida: la primera linea debe ser 'n m'" << endl;
+        return 1;
+    }
 
     vector<vector<int>> ady(n); //lista de adyacencia
     vector<int> grado(n, 0);  //grado de entrada de cada nodo
 
-    string ruta = "data/traza.json";   // ruta por defecto
-        if (argc > 1) {                     
-        ruta = argv[1];                  
+    // La traza es opcional: solo se escribe si se pasa una ruta como argumento.
+    // Sin argumento, el programa ejecuta solo el algoritmo (un ofstream sin abrir ignora lo que se le escribe).
+    ofstream traza;
+    if (argc > 1) {
+        traza.open(argv[1]);
+        if (!traza.is_open()) {
+            cerr << "No se pudo crear el archivo de traza: " << argv[1] << endl;
+            return 1;
+        }
     }
-    ofstream traza(ruta);
 
     traza << "{\n";
     traza << "  \"n\": " << n << ",\n";
@@ -36,7 +44,10 @@ int main(int argc, char* argv[]){
     // lee las aristas
     for(int i=0; i<m ; i++){
         int u,v;
-        cin >> u >> v;
+        if (!(cin >> u >> v) || u < 0 || u >= n || v < 0 || v >= n) {
+            cerr << "Arista invalida en la linea " << i + 2 << " (los nodos van de 0 a " << n - 1 << ")" << endl;
+            return 1;
+        }
         ady[u].push_back(v);
         grado[v]++;
 
@@ -49,7 +60,7 @@ int main(int argc, char* argv[]){
     traza << "],\n";
 
     traza << "  \"grado_inicial\": ";
-    escribirLista(traza, grado, 0);
+    escribirLista(traza, grado);
     traza << ",\n";
 
     vector<int> cola;
@@ -63,14 +74,14 @@ int main(int argc, char* argv[]){
     }
 
     traza << "  \"cola_inicial\": ";
-    escribirLista(traza, cola, 0);
+    escribirLista(traza, cola);
     traza << ",\n";
     traza << "  \"pasos\": [\n";
 
     bool primerPaso = true;
 
     //bucle principal
-    while(frente < cola.size()){
+    while(frente < (int)cola.size()){
         int actual = cola[frente];
         frente++;
 
@@ -98,15 +109,15 @@ int main(int argc, char* argv[]){
                   << ", \"entra\": " << (grado[vecino] == 0 ? "true" : "false") << "}";
         }
 
-        traza << "], \"cola\": ";
-        escribirLista(traza, cola, frente);
-        traza << "}";
+        // Solo se registran los eventos del paso (O(1) por arista). No se copia la cola
+        // completa en cada paso: eso haria crecer la traza a O(V^2) en el peor caso.
+        traza << "]}";
     }
 
     traza << "\n  ],\n";
 
     //detectar ciclo e imprimir el orden
-    if (cola.size() < n) {
+    if ((int)cola.size() < n) {
         cout << "hay ciclo" << endl;
         traza << "  \"hay_ciclo\": true,\n";
     } else {
@@ -118,7 +129,7 @@ int main(int argc, char* argv[]){
     }
 
     traza << "  \"orden\": ";
-    escribirLista(traza, cola, 0);
+    escribirLista(traza, cola);
     traza << "\n}\n";
     traza.close();
 

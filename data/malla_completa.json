@@ -1,0 +1,370 @@
+{
+ "descripcion": "Malla de Ciencia de Datos (UTEC). Los requisitos de créditos no se incluyen.",
+ "cursos": [
+  {
+   "nivel": 1,
+   "nombre": "Cálculo de una variable",
+   "prerrequisitos": []
+  },
+  {
+   "nivel": 1,
+   "nombre": "Matemáticas Discretas I",
+   "prerrequisitos": []
+  },
+  {
+   "nivel": 1,
+   "nombre": "Programación I",
+   "prerrequisitos": []
+  },
+  {
+   "nivel": 1,
+   "nombre": "Introducción a Ciencia de Datos",
+   "prerrequisitos": []
+  },
+  {
+   "nivel": 1,
+   "nombre": "Laboratorio de Comunicación 1",
+   "prerrequisitos": []
+  },
+  {
+   "nivel": 1,
+   "nombre": "Proyectos Interdisciplinarios 1",
+   "prerrequisitos": []
+  },
+  {
+   "nivel": 2,
+   "nombre": "Álgebra Lineal",
+   "prerrequisitos": [
+    "Cálculo de una variable"
+   ]
+  },
+  {
+   "nivel": 2,
+   "nombre": "Cálculo Vectorial",
+   "prerrequisitos": [
+    "Cálculo de una variable"
+   ]
+  },
+  {
+   "nivel": 2,
+   "nombre": "Óptica y Ondas",
+   "prerrequisitos": [
+    "Cálculo de una variable"
+   ]
+  },
+  {
+   "nivel": 2,
+   "nombre": "Matemáticas Discretas II",
+   "prerrequisitos": [
+    "Matemáticas Discretas I"
+   ]
+  },
+  {
+   "nivel": 2,
+   "nombre": "Programación II",
+   "prerrequisitos": [
+    "Programación I"
+   ]
+  },
+  {
+   "nivel": 2,
+   "nombre": "Laboratorio de Comunicación 2",
+   "prerrequisitos": [
+    "Laboratorio de Comunicación 1"
+   ]
+  },
+  {
+   "nivel": 3,
+   "nombre": "Estadística y Probabilidades I",
+   "prerrequisitos": [
+    "Cálculo de una variable",
+    "Programación I"
+   ]
+  },
+  {
+   "nivel": 3,
+   "nombre": "Ecuaciones Diferenciales",
+   "prerrequisitos": [
+    "Cálculo Vectorial"
+   ]
+  },
+  {
+   "nivel": 3,
+   "nombre": "Programación III",
+   "prerrequisitos": [
+    "Programación II"
+   ]
+  },
+  {
+   "nivel": 3,
+   "nombre": "Desarrollo Basado en Plataformas",
+   "prerrequisitos": [
+    "Programación II"
+   ]
+  },
+  {
+   "nivel": 3,
+   "nombre": "Base de Datos I",
+   "prerrequisitos": [
+    "Programación II"
+   ]
+  },
+  {
+   "nivel": 3,
+   "nombre": "Proyectos Interdisciplinarios 2",
+   "prerrequisitos": [
+    "Proyectos Interdisciplinarios 1"
+   ]
+  },
+  {
+   "nivel": 4,
+   "nombre": "Estadística y Probabilidades II",
+   "prerrequisitos": [
+    "Estadística y Probabilidades I"
+   ]
+  },
+  {
+   "nivel": 4,
+   "nombre": "Métodos Numéricos",
+   "prerrequisitos": [
+    "Programación I",
+    "Álgebra Lineal",
+    "Ecuaciones Diferenciales"
+   ]
+  },
+  {
+   "nivel": 4,
+   "nombre": "Algoritmos y Estructuras de Datos",
+   "prerrequisitos": [
+    "Programación III"
+   ]
+  },
+  {
+   "nivel": 4,
+   "nombre": "Cloud Computing",
+   "prerrequisitos": [
+    "Desarrollo Basado en Plataformas"
+   ]
+  },
+  {
+   "nivel": 4,
+   "nombre": "Optimización",
+   "prerrequisitos": [
+    "Programación II",
+    "Cálculo Vectorial"
+   ]
+  },
+  {
+   "nivel": 4,
+   "nombre": "Empresa y Consumidor",
+   "prerrequisitos": []
+  },
+  {
+   "nivel": 5,
+   "nombre": "Base de Datos II",
+   "prerrequisitos": [
+    "Algoritmos y Estructuras de Datos",
+    "Base de Datos I"
+   ]
+  },
+  {
+   "nivel": 5,
+   "nombre": "Análisis y Diseño de Algoritmos",
+   "prerrequisitos": [
+    "Algoritmos y Estructuras de Datos"
+   ]
+  },
+  {
+   "nivel": 5,
+   "nombre": "Procesos Estocásticos",
+   "prerrequisitos": [
+    "Matemáticas Discretas II",
+    "Estadística y Probabilidades II"
+   ]
+  },
+  {
+   "nivel": 5,
+   "nombre": "Análisis Computacional de Datos",
+   "prerrequisitos": [
+    "Programación II",
+    "Estadística y Probabilidades I"
+   ]
+  },
+  {
+   "nivel": 5,
+   "nombre": "Perú: Temas de la sociedad contemporánea",
+   "prerrequisitos": []
+  },
+  {
+   "nivel": 5,
+   "nombre": "Proyectos Interdisciplinarios 3",
+   "prerrequisitos": [
+    "Proyectos Interdisciplinarios 2"
+   ]
+  },
+  {
+   "nivel": 6,
+   "nombre": "Machine Learning",
+   "prerrequisitos": [
+    "Programación II",
+    "Estadística y Probabilidades I"
+   ]
+  },
+  {
+   "nivel": 6,
+   "nombre": "Computación Paralela y Distribuida",
+   "prerrequisitos": [
+    "Análisis y Diseño de Algoritmos"
+   ]
+  },
+  {
+   "nivel": 6,
+   "nombre": "Desarrollo de Productos de Datos",
+   "prerrequisitos": [
+    "Análisis Computacional de Datos",
+    "Cloud Computing"
+   ]
+  },
+  {
+   "nivel": 6,
+   "nombre": "Ética y Seguridad de los Datos",
+   "prerrequisitos": [
+    "Base de Datos II"
+   ]
+  },
+  {
+   "nivel": 6,
+   "nombre": "Finanzas Empresariales",
+   "prerrequisitos": [
+    "Empresa y Consumidor"
+   ]
+  },
+  {
+   "nivel": 6,
+   "nombre": "Economía, Gobernanza y Relaciones de Poder",
+   "prerrequisitos": []
+  },
+  {
+   "nivel": 7,
+   "nombre": "Deep Learning",
+   "prerrequisitos": [
+    "Machine Learning"
+   ]
+  },
+  {
+   "nivel": 7,
+   "nombre": "Gobernanza de Datos",
+   "prerrequisitos": [
+    "Ética y Seguridad de los Datos"
+   ]
+  },
+  {
+   "nivel": 7,
+   "nombre": "Storytelling con Datos",
+   "prerrequisitos": [
+    "Desarrollo de Productos de Datos"
+   ]
+  },
+  {
+   "nivel": 7,
+   "nombre": "Big Data",
+   "prerrequisitos": [
+    "Base de Datos I",
+    "Estadística y Probabilidades I"
+   ]
+  },
+  {
+   "nivel": 7,
+   "nombre": "Electivo 1",
+   "prerrequisitos": []
+  },
+  {
+   "nivel": 8,
+   "nombre": "Investigación en Computación",
+   "prerrequisitos": [
+    "Análisis y Diseño de Algoritmos"
+   ]
+  },
+  {
+   "nivel": 8,
+   "nombre": "Arte y Tecnología",
+   "prerrequisitos": []
+  },
+  {
+   "nivel": 8,
+   "nombre": "Proyecto Preprofesional",
+   "prerrequisitos": []
+  },
+  {
+   "nivel": 9,
+   "nombre": "Análisis de Series de Tiempo",
+   "prerrequisitos": [
+    "Deep Learning"
+   ]
+  },
+  {
+   "nivel": 9,
+   "nombre": "Proyecto Final de Ciencia de Datos I",
+   "prerrequisitos": [
+    "Investigación en Computación"
+   ]
+  },
+  {
+   "nivel": 9,
+   "nombre": "Visualización de Datos",
+   "prerrequisitos": [
+    "Big Data"
+   ]
+  },
+  {
+   "nivel": 9,
+   "nombre": "Electivo 2",
+   "prerrequisitos": []
+  },
+  {
+   "nivel": 9,
+   "nombre": "Evaluación Financiera de Proyectos",
+   "prerrequisitos": [
+    "Finanzas Empresariales"
+   ]
+  },
+  {
+   "nivel": 9,
+   "nombre": "Ética y Tecnología",
+   "prerrequisitos": []
+  },
+  {
+   "nivel": 10,
+   "nombre": "Proyecto Final de Ciencia de Datos II",
+   "prerrequisitos": [
+    "Proyecto Final de Ciencia de Datos I"
+   ]
+  },
+  {
+   "nivel": 10,
+   "nombre": "Ciencia de Datos Computacionales",
+   "prerrequisitos": [
+    "Deep Learning"
+   ]
+  },
+  {
+   "nivel": 10,
+   "nombre": "Data Mining",
+   "prerrequisitos": [
+    "Visualización de Datos"
+   ]
+  },
+  {
+   "nivel": 10,
+   "nombre": "Electivo 3",
+   "prerrequisitos": []
+  },
+  {
+   "nivel": 10,
+   "nombre": "Estrategia y Organizaciones",
+   "prerrequisitos": [
+    "Evaluación Financiera de Proyectos"
+   ]
+  }
+ ]
+}
