@@ -73,7 +73,7 @@ Formato de entrada: primera línea `n m` (nodos y aristas), luego `m` líneas `u
 | `data/malla_completa.json` | Malla completa de Ciencia de Datos (UTEC), usada en la motivación |
 | `data/ejemplo.txt` | 4 cursos de la malla para explicar la idea del algoritmo |
 | `data/malla.txt` | Grafo de 7 cursos de la malla |
-| `data/malla_ciclo.txt` | Caso de borde: ciclo inventado entre AED y ADA, con Investigación en Computación bloqueada por depender de él |
+| `data/malla_ciclo.txt` | Caso de borde: ciclo inventado entre AED y ADA, con Computación Paralela y Distribuida bloqueada por depender de él |
 | `animacion/escena_grafo.py` | Dibujo del grafo de la malla |
 | `animacion/escena_kahn.py` | Idea de Kahn con 4 cursos, ejecución sobre la malla y caso con ciclo |
 | `animacion/escenas_video.py` | Intro, motivación, concepto, complejidad, créditos y video completo |
